@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+
 class Newscontainer extends StatelessWidget {
   String imgUrl;
   String newhead ;
-  String newDes
+  String newDes;
   const Newscontainer({super.key});
 
   @override
