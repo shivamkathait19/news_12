@@ -11,6 +11,8 @@ import 'package:flutter/material.dart';
     required this.newURl,
     });
 
+
+
    @override
    Widget build(BuildContext context) {
      return Container(
@@ -25,12 +27,15 @@ import 'package:flutter/material.dart';
              padding: EdgeInsets.symmetric(horizontal: 20),
              child: Column(
                crossAxisAlignment:CrossAxisAlignment.start,
-               children: [
-             SizedBox(height: 20,),
-             Text("Vodafone Idea to launch 5G services by March 2025,",),
+               children:[
+
+                 SizedBox(height: 20,),
+
              Text(newsHead,style: TextStyle(fontSize: 20 ,fontWeight: FontWeight.bold),),
-             SizedBox(height: 10,),
-             Text(newswdes,style: TextStyle(fontSize: 10,),),
+
+
+                 SizedBox(height: 10,),
+             Text(newswdes,style: TextStyle(fontSize: 15,),),
 
            ],),),
 
@@ -42,7 +47,7 @@ import 'package:flutter/material.dart';
 
                  children: [
                    Padding(
-                     padding: const EdgeInsets.symmetric(horizontal: 25),
+                     padding: const EdgeInsets.symmetric(horizontal: 26),
                      child: ElevatedButton(onPressed: (){
                        print("GOING TO $newURl");
                      }, child: Text("Read more")),
