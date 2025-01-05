@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
    String newsHead;
    String newswdes;
    String newURl;
+   String newsCnt ;
     Newscontainer({super.key,
     required this.imgUrl,
     required this.newsHead,
     required this.newswdes,
     required this.newURl,
+      required this.newsCnt,
     });
 
 
@@ -28,23 +30,18 @@ import 'package:flutter/material.dart';
              child: Column(
                crossAxisAlignment:CrossAxisAlignment.start,
                children:[
-
                  SizedBox(height: 20,),
-
-             Text(newsHead,style: TextStyle(fontSize: 20 ,fontWeight: FontWeight.bold),),
-
-
+                 Text(newsHead,style: TextStyle(fontSize: 20 ,fontWeight: FontWeight.bold),),
                  SizedBox(height: 10,),
-             Text(newswdes,style: TextStyle(fontSize: 15,),),
+             Text(newswdes,style: TextStyle(fontSize: 12,color:Colors.black38,),),
+                 Text(newsCnt,style: TextStyle(fontSize: 12,),),
 
            ],),),
-
-             Spacer(),
+               Spacer(),
            Row(
              mainAxisAlignment: MainAxisAlignment.end,
              children: [
                Column(
-
                  children: [
                    Padding(
                      padding: const EdgeInsets.symmetric(horizontal: 26),

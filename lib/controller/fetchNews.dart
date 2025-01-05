@@ -1,4 +1,5 @@
- //https://newsapi.org/v2/top-headlines/sources?apiKey=f85d16b212f7435a8af5c17f6119453e
+// https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=9bb7bf6152d147ad8ba14cd0e7452f2f
+
 import 'dart:convert';
 import 'dart:math';
 import 'package:http/http.dart';
@@ -46,13 +47,19 @@ class FetchNews {
   ];
   static fetchNews() async{
     final _random = new Random();
-    var element = sources[_random.nextInt(sources.length)];
+    var sourceID = sources[_random.nextInt(sources.length)];
 
-print(element);
+print(sourceID);
 
-   Response response = await get(Uri.parse(" https://newsapi.org/v2/top-headlines/sources?apiKey=f85d16b212f7435a8af5c17f6119453e"
-       ));
+   Response response = await get(Uri.parse("https://newsapi.org/v2/top-headlines?sources=$sourceID&apiKey=caea254bf2f94f869e831ec24284ece1"));
 Map body_data = jsonDecode(response.body);
-print(body_data);
+List articles = body_data["articles"];
+//print(articles);
+
+    final _Newrandom = new Random();
+    var myArticle = articles[_random.nextInt(articles.length)];
+
+    print(myArticle);
+
   }
  }
