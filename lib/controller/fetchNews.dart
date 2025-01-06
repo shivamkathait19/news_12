@@ -3,6 +3,7 @@
 import 'dart:convert';
 import 'dart:math';
 import 'package:http/http.dart';
+import 'package:news_12/model/newsAdd.dart';
 class FetchNews {
   static List sources = [
     "abc-news",
@@ -45,7 +46,7 @@ class FetchNews {
     "time",
     "usa-today",
   ];
-  static fetchNews() async{
+  static  Future<Newsadd> fetchNews() async{
     final _random = new Random();
     var sourceID = sources[_random.nextInt(sources.length)];
 
@@ -60,6 +61,8 @@ List articles = body_data["articles"];
     var myArticle = articles[_random.nextInt(articles.length)];
 
     print(myArticle);
+
+   return Newsadd.fromAPItoApp(myArticle);
 
   }
  }

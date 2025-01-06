@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_12/controller/fetchNews.dart';
+import 'package:news_12/model/newsAdd.dart';
 import 'package:news_12/view/widget/Newscontainer.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,9 +10,20 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+   late Newsadd newsadd;
+
+   GetNews() async {
+
+     newsadd= await FetchNews.fetchNews();
+     setState(() {
+
+     });
+
+   }
+
   @override
-  void initState() {
-    FetchNews.fetchNews();
+  void initState(){
+     GetNews();
     super.initState();
   }
   @override
@@ -20,13 +32,16 @@ class _HomeScreenState extends State<HomeScreen> {
 body:PageView.builder(
 controller: PageController(initialPage: 0),
 scrollDirection: Axis.vertical,
-itemCount: 10
-,itemBuilder: (context,index){
-  FetchNews.fetchNews();
-  return Newscontainer(imgUrl: "https://plus.unsplash.com/premium_photo-1689701711439-e54f039f8d97?q=80&w=1914&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      newsdes: "Vodafone Idea is planning to launch its 5G",
-      newsHead: "Vodafone Idea is planning to launch its 5G", newsCnt: "Vodafone Idea is planning to launch its 5G mobile broadband services in March, reported The Economic Times. The company aims to make a mark in a market already dominated by Reliance Jio and Bharti Airtel.The company plans to introduce 5G with competitively priced plans that could be up to 15% cheaper at entry levels, added the report. The move is expected to spark a pricing war among telecom operators.",
-      newURl: "https://www.indiatoday.in/business/story/vodafone-idea-5g-launch-in-march-report-pricing-war-ahead-reliance-jio-airtel-vi-share-price-stmp-2658560-2025-01-02") ;
+    onPageChanged: (value){
+      GetNews();
+
+    },
+    itemBuilder: (context,index){
+ // FetchNews.fetchNews();
+  return Newscontainer(imgUrl: newsadd.imUrl,
+      newsdes: newsadd.newsdes,
+      newsHead: newsadd.newsHead, newsCnt: newsadd.newsCnt,
+      newURl: newsadd.newsUrl);
     }),
     );
   }
