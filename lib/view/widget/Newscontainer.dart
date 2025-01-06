@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
  class Newscontainer extends StatelessWidget {
    String imgUrl;
    String newsHead;
-   String newswdes;
+   String newsdes;
    String newURl;
    String newsCnt ;
     Newscontainer({super.key,
     required this.imgUrl,
     required this.newsHead,
-    required this.newswdes,
+    required this.newsdes,
     required this.newURl,
       required this.newsCnt,
     });
@@ -33,7 +33,7 @@ import 'package:flutter/material.dart';
                  SizedBox(height: 20,),
                  Text(newsHead,style: TextStyle(fontSize: 20 ,fontWeight: FontWeight.bold),),
                  SizedBox(height: 10,),
-             Text(newswdes,style: TextStyle(fontSize: 12,color:Colors.black38,),),
+             Text(newsdes,style: TextStyle(fontSize: 12,color:Colors.black38,),),
                  Text(newsCnt,style: TextStyle(fontSize: 12,),),
 
            ],),),
