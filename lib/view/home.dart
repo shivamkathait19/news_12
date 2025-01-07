@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-   late Newsadd newsadd;
+     late Newsadd newsadd;
 
    GetNews() async {
 
