@@ -31,10 +31,16 @@ import 'package:flutter/material.dart';
                crossAxisAlignment:CrossAxisAlignment.start,
                children:[
                  SizedBox(height: 20,),
-                 Text(newsHead,style: TextStyle(fontSize: 20 ,fontWeight: FontWeight.bold),),
+                 Text(
+                   newsCnt,
+                   style: TextStyle(fontSize: 15 ,fontWeight: FontWeight.bold),),
+
+                 Text(newsdes,style: TextStyle(fontSize: 15,color:Colors.black38,),),
                  SizedBox(height: 10,),
-             Text(newsdes,style: TextStyle(fontSize: 12,color:Colors.black38,),),
-                 Text(newsCnt,style: TextStyle(fontSize: 12,),),
+
+                 Text(
+                    "${newsHead.toString().substring(0,newsCnt.length-15)}......",
+                    style: TextStyle(fontSize: 19,),),
 
            ],),),
                Spacer(),

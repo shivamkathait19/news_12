@@ -38,9 +38,11 @@ scrollDirection: Axis.vertical,
     },
     itemBuilder: (context,index){
  // FetchNews.fetchNews();
-  return Newscontainer(imgUrl: newsadd.imUrl,
+  return Newscontainer(
+      imgUrl: newsadd.imUrl,
+      newsHead: newsadd.newsHead,
       newsdes: newsadd.newsdes,
-      newsHead: newsadd.newsHead, newsCnt: newsadd.newsCnt,
+      newsCnt: newsadd.newsCnt,
       newURl: newsadd.newsUrl);
     }),
     );
