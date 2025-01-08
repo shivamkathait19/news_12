@@ -55,7 +55,7 @@ import 'package:news_12/view/Detail_view.dart';
                    Padding(
                      padding: const EdgeInsets.symmetric(horizontal: 26),
                      child: ElevatedButton(onPressed: (){
-                       Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailViewScreen(newUri: newURl,)));
+                       Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailViewScreen(newsUrl: newURl,)));
                      }, child: Text("Read more")),
                    ),
                  ],
