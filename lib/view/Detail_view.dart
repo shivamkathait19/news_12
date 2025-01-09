@@ -18,7 +18,7 @@ class _DetailViewScreenState extends State<DetailViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title:  Text("News Snack")),
-      body: WebView
+      body: WebView(
         initialUrl:widget.newsUrl,
   javascriptMode : JavascriptMode .unrestricted,
         onWebViewCreated: (WebViewController webViewController){
