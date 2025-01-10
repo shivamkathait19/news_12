@@ -14,10 +14,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
-  LoadHome(){
-    Future.delayed(Duration(seconds: 3),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+  bool showingSplash  = true;
+   LoadHome()  {
+     Future.delayed(Duration(seconds: 3),(){
+       setState(() {
+        showingSplash = false;
+      });
     });
   }
   @override
@@ -30,14 +32,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'News 21',
-      theme: ThemeData(
+        title: 'News 21',
+        theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: splashScreen(),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: showingSplash ? splashScreen() : HomeScreen()
     );
   }
 }
-

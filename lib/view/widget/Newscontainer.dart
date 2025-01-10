@@ -24,6 +24,9 @@ import 'package:flutter/material.dart';
           Column(
              crossAxisAlignment: CrossAxisAlignment.start,
              children: [
+               FadeInImage.assetNetwork(
+                   height: 400, width: MediaQuery.of(context).size.width,fit: BoxFit.cover,
+                   placeholder: "Assert/Addimg/placeholder.jpg" , image: imgUrl),
            Image.network( height: 400, width: MediaQuery.of(context).size.width,fit: BoxFit.cover ,imgUrl),
            Container(
              padding: EdgeInsets.symmetric(horizontal: 20),
