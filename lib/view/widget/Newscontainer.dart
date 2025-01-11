@@ -44,7 +44,7 @@ import 'package:flutter/material.dart';
                    newsHead != "__"?
                    newsHead.length> 200 ? newsHead.substring(0,200):
                     "${newsHead.toString().substring(0,newsCnt.length-15)}......": newsHead,
-                     style: TextStyle(fontSize: 17,),),
+                     style: TextStyle(fontSize: 19,),),
 
            ],),),
                Spacer(),
