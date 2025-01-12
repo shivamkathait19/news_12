@@ -14,11 +14,11 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  /*bool showingSplash  = true;
+  bool showingSplash  = true;
    LoadHome()  {
-     Future.delayed(Duration(seconds: 3),(){
+     Future.delayed(Duration(seconds: 4),(){
        setState(() {
-    //    showingSplash = false;
+      showingSplash = false;
       });
     });
   }
@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
     // TODO: implement initState
     super.initState();
     LoadHome();
-  }*/
+  }
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: /*showingSplash ? Splashscreen() */ HomeScreen()
+        home: showingSplash ? Splashscreen() : HomeScreen()
     );
   }
 }

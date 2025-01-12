@@ -12,19 +12,32 @@ import 'package:flutter/material.dart';
                    SizedBox(
                      height: 200,
                    ),
-                   Image.network ("https://static.toiimg.com/photo/msid-104408881/104408881.jpg?1326042",),
-                 Text("News Snaks" ,style: TextStyle(fontSize: 20),),
+
+                   Image.network ("https://static.toiimg.com/photo/msid-104408881/104408881.jpg?1326042" ,
+                     width: 500,
+                        ),
+                 SizedBox(
+                   height: 20,
+                 ),
+                 Text("NEWS SNAKS" ,style: TextStyle(fontSize: 20,color: Colors.black54,decoration: TextDecoration.underline,decorationColor: Colors.black),),
                  Spacer(),
-                 Text("APP CREATE BY ",style: TextStyle(fontSize: 17),),
-                   Text("shubham ",style: TextStyle(fontSize: 15),),
+                 Text("APP CREATE BY ",style: TextStyle(fontSize: 12 , color:Colors.black38,),),
+                   Text("shubham ",style: TextStyle(fontSize: 10 ,color: Colors.black38,),),
                    SizedBox(
                      height: 15,
                    )
+
                       ],
+
+
+
+
+                 ),
                       ),
 
-               ),
                );
+
+
 
 
 
